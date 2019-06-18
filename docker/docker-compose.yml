@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  db:
+    image: postgres
+  app:
+    build: .
+    command: bash -c "python ./django/manage.py makemigrations && 
+                      python ./django/manage.py migrate &&                       
+                      python ./django/manage.py createsuperuser &&
+                      python ./django/manage.py runserver 0.0.0.0:8000"
+    volumes:
+      - .:/code
+    depends_on:
+      - db
+    environment:
+      - DB_PORT=5432
+      - DB_SERVICE=db
+      - DB_USER=postgres
+  proxy:
+    build: ./haproxy/
+    depends_on:
+      - app
+    environment:
+      - BALANCE=leastconn
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+      - 1936:1936      
+
