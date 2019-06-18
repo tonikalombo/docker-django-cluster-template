@@ -19,11 +19,11 @@ Vagrant.configure("2") do |config|
   #  config.vm.network :forwarded_port, guest: i, host: i
   #end
   
-  config.vm.host_name = "ticketboks"
+  config.vm.host_name = "devboks"
   #config.vm.network "public_network"
   config.vm.network "private_network", ip: "192.168.33.10"
 
-  config.vm.synced_folder "./", "/workspace/ticketboks/",  :owner => "vagrant", :group => "vagrant", :mount_options => ['dmode=775', 'fmode=664']
+  config.vm.synced_folder "./", "/workspace/devboks/",  :owner => "vagrant", :group => "vagrant", :mount_options => ['dmode=775', 'fmode=664']
   #config.vm.synced_folder "./src", "/home/vagrant/src",  :owner => "www-data", :group => "www-data", :mount_options => ['dmode=775', 'fmode=664']
   
   # Disable automatic box update checking. If you disable this, then
