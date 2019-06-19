@@ -1,5 +1,6 @@
 # dependencies
 sudo apt-add-repository universe
+sudo apt-add-repository ppa:ansible/ansible
 sudo apt-get update
 sudo apt-get install 			\
 	build-essential 			\
@@ -27,6 +28,8 @@ sudo apt-get install 			\
 #	unixodbc-bin -q -y               
 #sudo pip3 install pyodbc
 
+# install ansible
+sudo apt-get install ansible -y
 #install pip packages
 pip3 install requests
 pip3 install django
