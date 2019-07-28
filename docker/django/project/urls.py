@@ -18,6 +18,8 @@ from django.contrib import admin
 from django.urls import path
 
 urlpatterns = [
-    url(r'^', include('apps.collect_ip_addresses.urls')),
+    url(r'^', include('apps.collect_ip_addresses.urls')),    
+    url(r'public-ip-address/', include('apps.get_my_public_ip.urls')),
+    url(r'mtosi/', include('apps.mtosi.urls')),
     path('admin/', admin.site.urls),
 ]

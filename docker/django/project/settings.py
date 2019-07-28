@@ -37,7 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'apps.collect_ip_addresses'
+    'apps.collect_ip_addresses',
+    'apps.get_my_public_ip',
+    'apps.mtosi'
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,9 @@
+---
+
+
+- hosts: devboks 
+  become: true
+  gather_facts: yes
+
+  roles:
+    - jumpboks.bionic.bootstrap
