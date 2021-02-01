@@ -4,9 +4,9 @@ import json
 
 class SlackApi():
         def post_message_to_slack(payload):
-        		slack_domain = "XXXXX"
-        		slack_service_id = "ZZZZZ"
-        		slack_service_token = "YYYYYYY"
+                slack_domain = "XXXXX"
+                slack_service_id = "ZZZZZ"
+                slack_service_token = "YYYYYYY"
                 slack_url = "https://hooks.slack.com/services/"+slack_domain+"/"+slack_service_id+"/"+slack_service_token    
                 headers = {'Content-type':'application/json', }
                 slack_response = requests.post(slack_url, headers=headers, data=payload)

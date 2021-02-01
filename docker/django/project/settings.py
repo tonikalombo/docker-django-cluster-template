@@ -81,7 +81,8 @@ DATABASES = {
         'NAME': 'postgres',
         'USER': os.environ['DB_USER'], 
         'HOST': os.environ['DB_SERVICE'],
-        'PORT': os.environ['DB_PORT']
+        'PORT': os.environ['DB_PORT'],
+        'PASSWORD': os.environ['DB_PASSWORD']
     }
 }
 

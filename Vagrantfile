@@ -11,7 +11,7 @@ Vagrant.configure("2") do |config|
   #end
 
   config.vm.provider :virtualbox do |v|
-    v.name = "devboks"
+    v.name = "devboksbase"
     v.memory = 1024
     v.cpus = 2
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
   config.vm.synced_folder "./", "/workspace/devboks/",  :owner => "vagrant", :group => "vagrant", :mount_options => ['dmode=775', 'fmode=664']
   #config.vm.synced_folder "./src", "/home/vagrant/src",  :owner => "www-data", :group => "www-data", :mount_options => ['dmode=775', 'fmode=664']
   
-  config.vm.define :devboks do |devboks|
+  config.vm.define :devboksbase do |devboksbase|
   end
 
   # Ansible provisioner.
