@@ -31,7 +31,7 @@ Vagrant.configure("2") do |config|
   # Ansible provisioner.
   config.vm.provision "ansible" do |ansible|
     ansible.compatibility_mode = "2.0"
-    ansible.playbook = "ansible/playbooks/devboks.debian.docker.playbook.yml"
+    ansible.playbook = "ansible/playbooks/devboks.debian.docker.playbook.yaml"
     ansible.inventory_path = "ansible/inventory/hosts"
     ansible.become = true
   end
