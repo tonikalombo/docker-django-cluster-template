@@ -1,7 +1,7 @@
 ---
 
 - hosts: devboks #all
-  become: False
+  become: True
   gather_facts: yes
   user:  vagrant 
   vars:
