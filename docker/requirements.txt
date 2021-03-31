@@ -2,7 +2,7 @@ Django~=2.0.6
  psycopg2-binary
  requests
  djangorestframework
- lxml==4.2.5 
+ lxml==4.6.3 
  #xmlsec>=1.3.9
  zeep==4.0.0
  zeep[async]==4.0.0
